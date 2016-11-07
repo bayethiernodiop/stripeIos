@@ -10,4 +10,5 @@ use Stripe\Customer;
 use Stripe\Error;
 use Stripe\Stripe;
 
+Stripe::setApiKey("kkk");
 echo "lol";
