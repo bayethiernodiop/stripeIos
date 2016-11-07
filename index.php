@@ -13,7 +13,7 @@ use Stripe\Stripe;
 Stripe::setApiKey('sk_test_RjUUjoOIph5e4ddYJUzuV7yB');
 if ($_SERVER['REQUEST_URI'] === '/customer') {
 } elseif ($_SERVER['REQUEST_URI'] === '/charge') {
-
+    die("lol");
 } elseif ($_SERVER['REQUEST_URI'] === '/customer/sources/add') {
 
     //Attach a new payment source to the Customer for the currently-logged in user
