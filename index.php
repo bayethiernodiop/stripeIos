@@ -11,4 +11,4 @@ use Stripe\Error;
 use Stripe\Stripe;
 
 Stripe::setApiKey("kkk");
-echo "lol";
+echo "lol testing";
