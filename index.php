@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/customer') {
         header('Content-Type: application/json');
         echo $customer->jsonSerialize();
     } catch (Error\Base $e) {
-        var_dump($e->getMessage());
+        var_dump($e->getMessage().'ddddd');
         http_response_code(402);
     }
 }
