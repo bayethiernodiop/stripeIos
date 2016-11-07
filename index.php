@@ -12,7 +12,7 @@ use Stripe\Error\Base;
 use Stripe\Stripe;
 
 Stripe::setApiKey('sk_test_RjUUjoOIph5e4ddYJUzuV7yB');
-if ($_SERVER['REQUEST_URI'] === '/charge') {
+if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] === '/charge') {
     http_response_code(200);
     echo json_encode(array("lol"=>"polll"));
 }
