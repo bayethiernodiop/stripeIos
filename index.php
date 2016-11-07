@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources') {
         header('Content-Type: application/json');
         echo $customer->jsonSerialize();
         var_dump($customer->jsonSerialize());
+        die("lol");
     } catch (Base $e) {
         var_dump($e->getMessage());
         http_response_code(402);
