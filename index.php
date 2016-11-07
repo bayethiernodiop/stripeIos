@@ -45,7 +45,6 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources') {
             "description" => "Customer for avery.williams@example.com",
         ));
         $customer = Customer::retrieve($customer_id->id);
-        die($customer_id->id."test");
         header('Content-Type: application/json');
         echo $customer->jsonSerialize();
     } catch (Base $e) {
