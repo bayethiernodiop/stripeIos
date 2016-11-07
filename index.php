@@ -11,11 +11,10 @@ use Stripe\Error;
 use Stripe\Stripe;
 
 Stripe::setApiKey('sk_test_RjUUjoOIph5e4ddYJUzuV7yB');
-die($_SERVER['REQUEST_URI']);
-if ($_SERVER['REQUEST_URI'] === '/customer') {
+if ($_SERVER['REQUEST_URI'] === '/index.php/customer') {
 } elseif ($_SERVER['REQUEST_URI'] === '/charge') {
     die("lol");
-} elseif ($_SERVER['REQUEST_URI'] === '/customer/sources/add') {
+} elseif ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources/add') {
 
     //Attach a new payment source to the Customer for the currently-logged in user
     $customer_id = "1234"; // Load the Stripe Customer ID for your logged in user
@@ -27,9 +26,9 @@ if ($_SERVER['REQUEST_URI'] === '/customer') {
     } catch (Error\Base $e) {
         http_response_code(402);
     }
-} elseif ($_SERVER['REQUEST_URI'] === '/customer/default_source') {
+} elseif ($_SERVER['REQUEST_URI'] === '/index.php/customer/default_source') {
 
-} elseif ($_SERVER['REQUEST_URI'] === '/customer/get') {
+} elseif ($_SERVER['REQUEST_URI'] === '/index.php/customer/get') {
     //Retrieve the Customer object for the currently logged-in use
     try {
         $customer_id = "123449484"; // Load the Stripe Customer ID for your logged in user
