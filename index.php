@@ -12,8 +12,13 @@ use Stripe\Error\Base;
 use Stripe\Stripe;
 
 Stripe::setApiKey('sk_test_RjUUjoOIph5e4ddYJUzuV7yB');
-if ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources') {
-    //Attach a new payment source to the Customer for the currently-logged in user
+if ($_SERVER['REQUEST_URI'] === '/charge') {
+    http_response_code(200);
+    echo json_encode(array("lol"=>"polll"));
+}
+
+/*
+ *     //Attach a new payment source to the Customer for the currently-logged in user
     $customer_id = "1234"; // Load the Stripe Customer ID for your logged in user
 
     try {
@@ -52,3 +57,4 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources') {
         http_response_code(402);
     }
 }
+ */
