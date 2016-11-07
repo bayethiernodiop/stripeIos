@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/customer/sources') {
         $customer_id = Customer::create(array(
             "description" => "Customer for avery.williams@example.com",
         ));
-        die($customer_id);
-        $customer = Customer::retrieve($customer_id);
+        $customer = Customer::retrieve($customer_id->id);
+        die($customer_id->id."test");
         header('Content-Type: application/json');
         echo $customer->jsonSerialize();
     } catch (Base $e) {
