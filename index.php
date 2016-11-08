@@ -20,9 +20,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
     $token = $input['token'];
     $amount = $input['amount'];
     $currency = $input['currency'];
-    $description = $input['description'].'lol';
-    echo $inputJSON;
-
+    $description = $input['description'];
     try {
         $charge = Charge::create(array(
             "amount" => $amount * 100,
