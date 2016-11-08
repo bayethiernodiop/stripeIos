@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
             "description" => $description
         ));
         http_response_code(200);
-        echo json_encode(array("message"=>"SUCCESS"));
+        echo json_encode(array("message"=>"SUCCESS TRANSFER"));
     } catch (Card $e) {
         http_response_code(400);
         echo json_encode(array("message"=>"error with your card"));
