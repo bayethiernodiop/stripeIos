@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
     $description = $input['description'];
     echo $inputJSON;
 
-    /*try {
+    try {
         $charge = Charge::create(array(
             "amount" => (int)$amount * 100,
             "currency" => $currency,
@@ -31,9 +31,10 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
             "description" => $description
         ));
         http_response_code(200);
+        echo json_encode(array("message"=>"SUCCESS"));
     } catch (Card $e) {
         http_response_code(400);
-        return -1;
-    }*/
+        echo json_encode(array("message"=>"error with your card"));
+    }
 }
 
