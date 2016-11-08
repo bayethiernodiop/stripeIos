@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
 
     try {
         $charge = Charge::create(array(
-            "amount" => (int)$amount * 100,
+            "amount" => $amount * 100,
             "currency" => $currency,
             "source" => $token,
             "description" => $description
