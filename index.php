@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] =
     $token = $input['token'];
     $amount = $input['amount'];
     $currency = $input['currency'];
-    $description = $input['description'];
+    $description = $input['description'].'lol';
     echo $inputJSON;
 
     try {
