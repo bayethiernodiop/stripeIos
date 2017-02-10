@@ -14,7 +14,7 @@ use Stripe\Error\Card;
 use Stripe\Stripe;
 
 
-Stripe::setApiKey('sk_live_jQB8CPFmZqTFXLLteVbveQRn');
+Stripe::setApiKey('sk_test_Iu2kpGnRwoL9kv8t888N1Olq');
 if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] === '/charge') {
     $inputJSON = file_get_contents('php://input');
     $input = json_decode($inputJSON, TRUE); //convert JSON into array
