@@ -13,6 +13,7 @@ use Stripe\Error\Base;
 use Stripe\Error\Card;
 use Stripe\Stripe;
 
+
 Stripe::setApiKey('sk_live_jQB8CPFmZqTFXLLteVbveQRn');
 if ($_SERVER['REQUEST_URI'] === '/index.php/charge' or $_SERVER['REQUEST_URI'] === '/charge') {
     $inputJSON = file_get_contents('php://input');
